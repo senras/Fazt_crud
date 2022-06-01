@@ -9,7 +9,7 @@ router.get("/notes/add", (req, res) => {
 
 router.post("/notes/new-note", (req, res) => {
 	const { title, description } = req.body;
-	const errors = [];
+	let errors = [];
 	if (!title) {
 		errors.push({ text: "Please Write a Title" });
 	}
