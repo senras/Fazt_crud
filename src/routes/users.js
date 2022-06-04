@@ -59,8 +59,9 @@ router.post("/users/signup", async (req, res) => {
 	}
 });
 
-router.get("/users/signout", (req, res) => {
-	res.send("Cerrando Sesión");
+router.get("/users/logout", (req, res) => {
+	req.logout();
+	res.redirect("/");
 });
 
 module.exports = router;
