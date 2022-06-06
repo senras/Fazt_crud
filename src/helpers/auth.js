@@ -1,6 +1,4 @@
-const helpers = {};
-
-helpers.isAuthenticated = (req, res, next) => {
+const isAuthenticated = (req, res, next) => {
 	if (req.isAuthenticated()) {
 		res.locals.user = req.user.toJSON() || null;
 		return next();
@@ -9,4 +7,4 @@ helpers.isAuthenticated = (req, res, next) => {
 	res.redirect("/users/signin");
 };
 
-module.exports = helpers;
+module.exports = isAuthenticated;

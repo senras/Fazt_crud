@@ -2,7 +2,7 @@ const { Router } = require("express");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
 const Note = require("../models/Note");
-const { isAuthenticated } = require("../helpers/auth");
+const isAuthenticated = require("../helpers/auth");
 const router = Router();
 
 router.get("/notes/add", isAuthenticated, (req, res) => {
