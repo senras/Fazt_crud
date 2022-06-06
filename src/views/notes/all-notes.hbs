@@ -18,9 +18,10 @@
 	{{else}}
 		<div class="card col-md-5 mx-auto">
 			<div class="card-body">
+				<h1> Hello {{user.name}}</h1>
 				<p class="lead"> There are not notes yet.</p>
+				<a href="/notes/add" class="btn btn-success w-100 mb-3">Create One!</a>
 			</div>
-			<a href="/notes/add" class="btn btn-success w-100 mb-3">Create One!</a>
 		</div>
 	{{/each}}
 </div>

@@ -60,8 +60,10 @@ router.post("/users/signup", async (req, res) => {
 });
 
 router.get("/users/logout", (req, res) => {
-	req.logout();
-	res.redirect("/");
+	req.logout(req.user, (err) => {
+		if (err) return next(err);
+		res.redirect("/");
+	});
 });
 
 module.exports = router;
